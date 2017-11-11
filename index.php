@@ -25,6 +25,7 @@ $app->get('/firstsync/:id_user/:json', function($id_user, $json) use($app){
  * empregos, horas, salarios, horas
  *  */
 $app->get('/syncall/:id_user', function($id_user) use($app){
+	echo "Teste";
     (new \controllers\FullResyncController($app))->listAllDataByUser($id_user);
 });
 
